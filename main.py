@@ -9,13 +9,13 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
 
         # Connect buttons to functions
-       # self.ui.pushButton.clicked.connect(lambda: self.button_clicked("pushButton"))
-       # self.ui.pushButton_2.clicked.connect(lambda: self.button_clicked("pushButton_2"))
-       # self.ui.pushButton_3.clicked.connect(lambda: self.button_clicked("pushButton_3"))
+        self.ui.pushButton.clicked.connect(lambda: self.button_clicked("pushButton"))
+        self.ui.pushButton_2.clicked.connect(lambda: self.button_clicked("pushButton_2"))
+        self.ui.pushButton_3.clicked.connect(lambda: self.button_clicked("pushButton_3"))
 
- #   def button_clicked(self, label):
- #       print(f"{label} was clicked!")
- #       self.setWindowTitle(label)
+   # def button_clicked(self, label):
+    #    print(f"{label} was clicked!")
+    #   self.setWindowTitle(label)
 
 app = QApplication(sys.argv)
 window = MainWindow()
