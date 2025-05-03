@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>567</width>
+    <height>416</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow, QWidget {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 13px;
+}
+
+QPushButton {
+    background-color: #2d2d30;
+    color: #ffffff;
+    border: 1px solid #3c3c3c;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+
+QPushButton:hover {
+    background-color: #3c3c3c;
+    border: 1px solid #5a5a5a;
+}
+
+QPushButton:pressed {
+    background-color: #2a2a2a;
+    border: 1px solid #0078d7;  /* Accent blue */
+}
+
+QLabel {
+    color: #d4d4d4;
+}
+
+QComboBox {
+    background-color: #2d2d30;
+    color: #ffffff;
+    border: 1px solid #3c3c3c;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+QComboBox:hover {
+    border: 1px solid #5a5a5a;
+}
+
+QGroupBox {
+    border: 1px solid #333;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+QGroupBox:title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px;
+    color: #aaaaaa;
+    background-color: transparent;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #2d2d30;
+    border: 1px solid #444;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+QStatusBar {
+    background-color: #1e1e1e;
+    color: #888888;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QMainWindow, QWidget {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 13px;
+}
+
+QPushButton {
+    background-color: #2d2d30;
+    color: #ffffff;
+    border: 1px solid #3c3c3c;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+
+QPushButton:hover {
+    background-color: #3c3c3c;
+    border: 1px solid #5a5a5a;
+}
+
+QPushButton:pressed {
+    background-color: #2a2a2a;
+    border: 1px solid #0078d7;  /* Accent blue */
+}
+
+QLabel {
+    color: #d4d4d4;
+}
+
+QComboBox {
+    background-color: #2d2d30;
+    color: #ffffff;
+    border: 1px solid #3c3c3c;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+QComboBox:hover {
+    border: 1px solid #5a5a5a;
+}
+
+QGroupBox {
+    border: 1px solid #333;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+QGroupBox:title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px;
+    color: #aaaaaa;
+    background-color: transparent;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #2d2d30;
+    border: 1px solid #444;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+QStatusBar {
+    background-color: #1e1e1e;
+    color: #888888;
+}
+</string>
+   </property>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>241</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI,sans-serif</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Digital Inputs </string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Logic Input 1 </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>30</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Logic Input 2</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>90</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Logic Input 6</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Logic Input 5</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_14">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>50</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_13">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>110</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_12">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_7">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_22">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>160</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>140</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Logic Input 4</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>140</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Logic Input 3</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>200</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Logic Input 8</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_23">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>220</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_24">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>220</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_25">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>160</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>200</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Logic Input 7</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>30</y>
+      <width>131</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI,sans-serif</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Analog inputs </string>
+    </property>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Analog Input 1 </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>130</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Analog Input 2</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>190</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Analog Input 4</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>80</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Analog Input 3</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_18">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>150</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_19">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>210</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_20">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_21">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>100</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>130</y>
+      <width>131</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI,sans-serif</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Project Details</string>
+    </property>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>MLD Typs</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>80</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Lamp Type</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_28">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>MINI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>STD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PLUS</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_29">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>100</y>
+       <width>73</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI,sans-serif</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>Tail Lamp</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Head Lamp</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Car Body</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>50</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI,sans-serif</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-image: url(:/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Users/nikhi/Downloads/Untitled.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>300</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI,sans-serif</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Start Test</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Users/nikhi/Downloads/play.png</normaloff>../../Users/nikhi/Downloads/play.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>567</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <addaction name="actionsave"/>
+    <addaction name="actionload"/>
+   </widget>
+   <addaction name="menufile"/>
+  </widget>
+  <action name="actionsave">
+   <property name="text">
+    <string>save</string>
+   </property>
+  </action>
+  <action name="actionload">
+   <property name="text">
+    <string>load</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
