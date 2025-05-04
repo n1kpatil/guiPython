@@ -24,481 +24,44 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(720, 1024)
-        MainWindow.setStyleSheet(u"QComboBox {\n"
-"    min-width: 120px;   /* Width */\n"
-"    min-height: 30px;   /* Height */\n"
-"    font-size: 14px;    /* Optional: Adjust text */\n"
+        MainWindow.resize(720, 1280)
+        MainWindow.setStyleSheet(u"/* Closed (default) QComboBox view */\n"
+"QComboBox {\n"
+"    background-color: white;\n"
+"    color: black;\n"
+"    min-width: 120px;\n"
+"    min-height: 30px;\n"
+"    font-size: 14px;\n"
+"    font-weight: bold;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
 "}\n"
 "\n"
-"/*Copyright (c) DevSec Studio. All rights reserved.\n"
-"\n"
-"MIT License\n"
-"\n"
-"Permission is hereby granted, free of charge, to any person obtaining a copy\n"
-"of this software and associated documentation files (the \"Software\"), to deal\n"
-"in the Software without restriction, including without limitation the rights\n"
-"to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n"
-"copies of the Software, and to permit persons to whom the Software is\n"
-"furnished to do so, subject to the following conditions:\n"
-"\n"
-"The above copyright notice and this permission notice shall be included in all\n"
-"copies or substantial portions of the Software.\n"
-"\n"
-"THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n"
-"IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n"
-"FITNESS FOR A PARTI"
-                        "CULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n"
-"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n"
-"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n"
-"OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
-"*/\n"
-"\n"
-"/*-----QWidget-----*/\n"
-"QWidget\n"
-"{\n"
-"	background-color: #fff;\n"
-"	color: red;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"/*-----QLabel-----*/\n"
-"QLabel\n"
-"{\n"
-"	background-color: transparent;\n"
-"	color: #454544;\n"
-"	font-weight: bold;\n"
-"	font-size: 13px;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"/*-----QPushButton-----*/\n"
-"QPushButton\n"
-"{\n"
-"	background-color: #5c55e9;\n"
-"	color: #fff;\n"
-"	font-size: 13px;\n"
-"	font-weight: bold;\n"
-"	border-top-right-radius: 15px;\n"
-"	border-top-left-radius: 0px;\n"
-"	border-bottom-right-radius: 0px;\n"
-"	border-bottom-left-radius: 15px;\n"
-"	padding: 10px;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QPushButton::disabled\n"
-"{\n"
-"	background-color: #5c5c5c;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QPushB"
-                        "utton::hover\n"
-"{\n"
-"	background-color: #5564f2;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QPushButton::pressed\n"
-"{\n"
-"	background-color: #3d4ef2;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"/*-----QCheckBox-----*/\n"
-"QCheckBox\n"
-"{\n"
-"	background-color: transparent;\n"
-"	color: #5c55e9;\n"
-"	font-size: 10px;\n"
-"	font-weight: bold;\n"
-"	border: none;\n"
-"	border-radius: 5px;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"/*-----QCheckBox-----*/\n"
-"QCheckBox::indicator\n"
-"{\n"
-"    background-color: #323232;\n"
-"    border: 1px solid darkgray;\n"
-"    width: 12px;\n"
-"    height: 12px;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QCheckBox::indicator:checked\n"
-"{\n"
-"    image:url(\"./ressources/check.png\");\n"
-"	background-color: #5c55e9;\n"
-"    border: 1px solid #5c55e9;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QCheckBox::indicator:unchecked:hover\n"
-"{\n"
-"    border: 1px solid #5c55e9;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QCheckBox::disabled\n"
-"{\n"
-"	color: #656565;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QCheckBox::indicator:disabled\n"
-"{\n"
-"	background-color: #656565;\n"
-"	color: #656565;\n"
-"    border: 1"
-                        "px solid #656565;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"/*-----QLineEdit-----*/\n"
-"QLineEdit\n"
-"{\n"
-"	background-color: #c2c7d5;\n"
-"	color: #2a547f;\n"
-"	border: none;\n"
-"	padding: 5px;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"/*-----QListView-----*/\n"
-"QListView\n"
-"{\n"
-"	background-color: #5c55e9;\n"
-"	color: #fff;\n"
-"	font-size: 14px;\n"
-"	font-weight: bold;\n"
-"	show-decoration-selected: 0;\n"
-"	border-radius: 4px;\n"
-"	padding-left: -15px;\n"
-"	padding-right: -15px;\n"
-"	padding-top: 5px;\n"
-"\n"
-"} \n"
-"\n"
-"\n"
-"QListView:disabled \n"
-"{\n"
-"	background-color: #5c5c5c;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QListView::item\n"
-"{\n"
-"	background-color: #454e5e;\n"
-"	border: none;\n"
-"	padding: 10px;\n"
-"	border-radius: 0px;\n"
-"	padding-left : 10px;\n"
-"	height: 32px;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QListView::item:selected\n"
-"{\n"
-"	color: #000;\n"
-"	background-color: #fff;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QListView::item:!selected\n"
-"{\n"
-"	color:white;\n"
-"	background-color: transparent;\n"
-"	border: none;\n"
-"	padding-left : 10px;\n"
-"\n"
-"}\n"
-"\n"
-""
-                        "\n"
-"QListView::item:!selected:hover\n"
-"{\n"
-"	color: #fff;\n"
-"	background-color: #5564f2;\n"
-"	border: none;\n"
-"	padding-left : 10px;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"/*-----QTreeView-----*/\n"
-"QTreeView \n"
-"{\n"
-"	background-color: #fff;\n"
-"	show-decoration-selected: 0;\n"
-"	color: #454544;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QTreeView:disabled\n"
-"{\n"
-"	background-color: #242526;\n"
-"	show-decoration-selected: 0;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QTreeView::item \n"
-"{\n"
-"	border-top-color: transparent;\n"
-"	border-bottom-color: transparent;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QTreeView::item:hover \n"
-"{\n"
-"	background-color: #bcbdbb;\n"
-"	color: #000;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QTreeView::item:selected \n"
-"{\n"
-"	background-color: #5c55e9;\n"
-"	color: #fff;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QTreeView::item:selected:active\n"
-"{\n"
-"	background-color: #5c55e9;\n"
-"	color: #fff;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QTreeView::item:selected:disabled\n"
-"{\n"
-"	background-color: #525251;\n"
-"	color: #656565;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QTreeView::branch:has-child"
-                        "ren:!has-siblings:closed,\n"
-"QTreeView::branch:closed:has-children:has-siblings \n"
-"{\n"
-"	image: url(://tree-closed.png);\n"
-"\n"
-"}\n"
-"\n"
-"QTreeView::branch:open:has-children:!has-siblings,\n"
-"QTreeView::branch:open:has-children:has-siblings  \n"
-"{\n"
-"	image: url(://tree-open.png);\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"/*-----QTableView & QTableWidget-----*/\n"
-"QTableView\n"
-"{\n"
-"    background-color: #fff;\n"
-"	border: 1px solid gray;\n"
-"    color: #454544;\n"
-"    gridline-color: gray;\n"
-"    outline : 0;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QTableView::disabled\n"
-"{\n"
-"    background-color: #242526;\n"
-"    border: 1px solid #32414B;\n"
-"    color: #656565;\n"
-"    gridline-color: #656565;\n"
-"    outline : 0;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QTableView::item:hover \n"
-"{\n"
-"    background-color: #bcbdbb;\n"
-"    color: #000;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QTableView::item:selected \n"
-"{\n"
-"	background-color: #5c55e9;\n"
-"    color: #fff;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QTableView::item:selected:disabled\n"
-"{\n"
-"    background-colo"
-                        "r: #1a1b1c;\n"
-"    border: 2px solid #525251;\n"
-"    color: #656565;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QTableCornerButton::section\n"
-"{\n"
-"	background-color: #ced5e3;\n"
-"	border: none;\n"
-"    color: #fff;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QHeaderView::section\n"
-"{\n"
-"	color: #2a547f;\n"
-"	border: 0px;\n"
-"	background-color: #ced5e3;\n"
-"	padding: 5px;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QHeaderView::section:disabled\n"
-"{\n"
-"    background-color: #525251;\n"
-"    color: #656565;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QHeaderView::section:checked\n"
-"{\n"
-"    color: #fff;\n"
+"/* Drop-down arrow */\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 25px;\n"
 "    background-color: #5c55e9;\n"
-"\n"
+"    border-left: 1px solid #888;\n"
+"    border-top-right-radius: 5px;\n"
+"    border-bottom-right-radius: 5px;\n"
 "}\n"
 "\n"
-"\n"
-"QHeaderView::section:checked:disabled\n"
-"{\n"
-"    color: #656565;\n"
-"    background-color: #525251;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QHeaderView::section::vertical::first,\n"
-"QHeaderView::section::vertical::only-one\n"
-"{\n"
-"    border-top: 1px solid #353635;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QHeaderView::section::vertical\n"
-"{\n"
-"    border-top: 1px solid #353635;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QHeaderView::section::horizontal::fir"
-                        "st,\n"
-"QHeaderView::section::horizontal::only-one\n"
-"{\n"
-"    border-left: 1px solid #353635;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QHeaderView::section::horizontal\n"
-"{\n"
-"    border-left: 1px solid #353635;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"/*-----QScrollBar-----*/\n"
-"QScrollBar:horizontal \n"
-"{\n"
-"    background-color: transparent;\n"
-"    height: 8px;\n"
-"    margin: 0px;\n"
-"    padding: 0px;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QScrollBar::handle:horizontal \n"
-"{\n"
+"/* Drop-down arrow icon */\n"
+"QComboBox::down-arrow {\n"
+"    image: none; /* Optional: remove built-in arrow if you want to add your own */\n"
 "    border: none;\n"
-"	min-width: 100px;\n"
-"    background-color: #7e92b7;\n"
-"\n"
 "}\n"
 "\n"
-"\n"
-"QScrollBar::add-line:horizontal, \n"
-"QScrollBar::sub-line:horizontal,\n"
-"QScrollBar::add-page:horizontal, \n"
-"QScrollBar::sub-page:horizontal \n"
-"{\n"
-"    width: 0px;\n"
-"    background-color: #d8dce6;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QScrollBar:vertical \n"
-"{\n"
-"    background-color: transparent;\n"
-"    width: 8px;\n"
-"    margin: 0;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QScrollBar::handle:vertical \n"
-"{\n"
-"    border: none;\n"
-"	min-height: 100px;\n"
-"    background-color: #7"
-                        "e92b7;\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QScrollBar::add-line:vertical, \n"
-"QScrollBar::sub-line:vertical,\n"
-"QScrollBar::add-page:vertical, \n"
-"QScrollBar::sub-page:vertical \n"
-"{\n"
-"    height: 0px;\n"
-"    background-color: #d8dce6;\n"
-"\n"
+"/* Drop-down list (popup) */\n"
+"QComboBox QAbstractItemView {\n"
+"    background-color: #5c55e9;  /* Popup background */\n"
+"    color: white;               /* Popup text */\n"
+"    selection-background-color: #3d4ef2;\n"
+"    selection-color: white;\n"
+""
+                        "    border: none;\n"
 "}\n"
 "")
         self.actionsave = QAction(MainWindow)
@@ -544,9 +107,8 @@ class Ui_MainWindow(object):
         self.comboBox_14.addItem("")
         self.comboBox_14.addItem("")
         self.comboBox_14.setObjectName(u"comboBox_14")
-        self.comboBox_14.setGeometry(QRect(190, 50, 122, 32))
-        font2 = QFont()
-        self.comboBox_14.setFont(font2)
+        self.comboBox_14.setGeometry(QRect(190, 50, 130, 40))
+        self.comboBox_14.setFont(font1)
         self.comboBox_13 = QComboBox(self.groupBox)
         self.comboBox_13.addItem("")
         self.comboBox_13.addItem("")
@@ -558,8 +120,8 @@ class Ui_MainWindow(object):
         self.comboBox_13.addItem("")
         self.comboBox_13.addItem("")
         self.comboBox_13.setObjectName(u"comboBox_13")
-        self.comboBox_13.setGeometry(QRect(190, 110, 122, 32))
-        self.comboBox_13.setFont(font2)
+        self.comboBox_13.setGeometry(QRect(190, 110, 130, 40))
+        self.comboBox_13.setFont(font1)
         self.comboBox_12 = QComboBox(self.groupBox)
         self.comboBox_12.addItem("")
         self.comboBox_12.addItem("")
@@ -571,8 +133,8 @@ class Ui_MainWindow(object):
         self.comboBox_12.addItem("")
         self.comboBox_12.addItem("")
         self.comboBox_12.setObjectName(u"comboBox_12")
-        self.comboBox_12.setGeometry(QRect(30, 50, 122, 32))
-        self.comboBox_12.setFont(font2)
+        self.comboBox_12.setGeometry(QRect(30, 50, 130, 40))
+        self.comboBox_12.setFont(font1)
         self.comboBox_7 = QComboBox(self.groupBox)
         self.comboBox_7.addItem("")
         self.comboBox_7.addItem("")
@@ -584,8 +146,8 @@ class Ui_MainWindow(object):
         self.comboBox_7.addItem("")
         self.comboBox_7.addItem("")
         self.comboBox_7.setObjectName(u"comboBox_7")
-        self.comboBox_7.setGeometry(QRect(30, 110, 122, 32))
-        self.comboBox_7.setFont(font2)
+        self.comboBox_7.setGeometry(QRect(30, 110, 130, 40))
+        self.comboBox_7.setFont(font1)
         self.comboBox_22 = QComboBox(self.groupBox)
         self.comboBox_22.addItem("")
         self.comboBox_22.addItem("")
@@ -597,8 +159,8 @@ class Ui_MainWindow(object):
         self.comboBox_22.addItem("")
         self.comboBox_22.addItem("")
         self.comboBox_22.setObjectName(u"comboBox_22")
-        self.comboBox_22.setGeometry(QRect(340, 50, 122, 32))
-        self.comboBox_22.setFont(font2)
+        self.comboBox_22.setGeometry(QRect(340, 50, 130, 40))
+        self.comboBox_22.setFont(font1)
         self.label_17 = QLabel(self.groupBox)
         self.label_17.setObjectName(u"label_17")
         self.label_17.setGeometry(QRect(500, 30, 111, 16))
@@ -622,8 +184,8 @@ class Ui_MainWindow(object):
         self.comboBox_23.addItem("")
         self.comboBox_23.addItem("")
         self.comboBox_23.setObjectName(u"comboBox_23")
-        self.comboBox_23.setGeometry(QRect(500, 110, 122, 32))
-        self.comboBox_23.setFont(font2)
+        self.comboBox_23.setGeometry(QRect(500, 110, 130, 40))
+        self.comboBox_23.setFont(font1)
         self.comboBox_24 = QComboBox(self.groupBox)
         self.comboBox_24.addItem("")
         self.comboBox_24.addItem("")
@@ -635,8 +197,8 @@ class Ui_MainWindow(object):
         self.comboBox_24.addItem("")
         self.comboBox_24.addItem("")
         self.comboBox_24.setObjectName(u"comboBox_24")
-        self.comboBox_24.setGeometry(QRect(340, 110, 122, 32))
-        self.comboBox_24.setFont(font2)
+        self.comboBox_24.setGeometry(QRect(340, 110, 130, 40))
+        self.comboBox_24.setFont(font1)
         self.comboBox_25 = QComboBox(self.groupBox)
         self.comboBox_25.addItem("")
         self.comboBox_25.addItem("")
@@ -648,8 +210,8 @@ class Ui_MainWindow(object):
         self.comboBox_25.addItem("")
         self.comboBox_25.addItem("")
         self.comboBox_25.setObjectName(u"comboBox_25")
-        self.comboBox_25.setGeometry(QRect(500, 50, 122, 32))
-        self.comboBox_25.setFont(font2)
+        self.comboBox_25.setGeometry(QRect(500, 50, 130, 40))
+        self.comboBox_25.setFont(font1)
         self.label_20 = QLabel(self.groupBox)
         self.label_20.setObjectName(u"label_20")
         self.label_20.setGeometry(QRect(340, 90, 111, 16))
@@ -685,8 +247,8 @@ class Ui_MainWindow(object):
         self.comboBox_18.addItem("")
         self.comboBox_18.addItem("")
         self.comboBox_18.setObjectName(u"comboBox_18")
-        self.comboBox_18.setGeometry(QRect(340, 50, 122, 32))
-        self.comboBox_18.setFont(font2)
+        self.comboBox_18.setGeometry(QRect(340, 50, 130, 40))
+        self.comboBox_18.setFont(font1)
         self.comboBox_19 = QComboBox(self.groupBox_2)
         self.comboBox_19.addItem("")
         self.comboBox_19.addItem("")
@@ -698,8 +260,8 @@ class Ui_MainWindow(object):
         self.comboBox_19.addItem("")
         self.comboBox_19.addItem("")
         self.comboBox_19.setObjectName(u"comboBox_19")
-        self.comboBox_19.setGeometry(QRect(490, 50, 122, 32))
-        self.comboBox_19.setFont(font2)
+        self.comboBox_19.setGeometry(QRect(490, 50, 130, 40))
+        self.comboBox_19.setFont(font1)
         self.comboBox_20 = QComboBox(self.groupBox_2)
         self.comboBox_20.addItem("")
         self.comboBox_20.addItem("")
@@ -711,8 +273,8 @@ class Ui_MainWindow(object):
         self.comboBox_20.addItem("")
         self.comboBox_20.addItem("")
         self.comboBox_20.setObjectName(u"comboBox_20")
-        self.comboBox_20.setGeometry(QRect(30, 50, 122, 32))
-        self.comboBox_20.setFont(font2)
+        self.comboBox_20.setGeometry(QRect(30, 50, 130, 40))
+        self.comboBox_20.setFont(font1)
         self.comboBox_21 = QComboBox(self.groupBox_2)
         self.comboBox_21.addItem("")
         self.comboBox_21.addItem("")
@@ -724,8 +286,8 @@ class Ui_MainWindow(object):
         self.comboBox_21.addItem("")
         self.comboBox_21.addItem("")
         self.comboBox_21.setObjectName(u"comboBox_21")
-        self.comboBox_21.setGeometry(QRect(190, 50, 122, 32))
-        self.comboBox_21.setFont(font2)
+        self.comboBox_21.setGeometry(QRect(190, 50, 130, 40))
+        self.comboBox_21.setFont(font1)
         self.groupBox_3 = QGroupBox(self.centralwidget)
         self.groupBox_3.setObjectName(u"groupBox_3")
         self.groupBox_3.setGeometry(QRect(40, 510, 641, 151))
@@ -743,15 +305,15 @@ class Ui_MainWindow(object):
         self.comboBox_28.addItem("")
         self.comboBox_28.addItem("")
         self.comboBox_28.setObjectName(u"comboBox_28")
-        self.comboBox_28.setGeometry(QRect(30, 50, 122, 32))
-        self.comboBox_28.setFont(font2)
+        self.comboBox_28.setGeometry(QRect(30, 50, 130, 40))
+        self.comboBox_28.setFont(font1)
         self.comboBox_29 = QComboBox(self.groupBox_3)
         self.comboBox_29.addItem("")
         self.comboBox_29.addItem("")
         self.comboBox_29.addItem("")
         self.comboBox_29.setObjectName(u"comboBox_29")
-        self.comboBox_29.setGeometry(QRect(190, 50, 122, 32))
-        self.comboBox_29.setFont(font2)
+        self.comboBox_29.setGeometry(QRect(190, 50, 130, 40))
+        self.comboBox_29.setFont(font1)
         self.pushButton = QPushButton(self.centralwidget)
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setGeometry(QRect(280, 720, 141, 61))
