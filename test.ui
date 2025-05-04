@@ -6,168 +6,503 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>567</width>
-    <height>416</height>
+    <width>720</width>
+    <height>1024</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QMainWindow, QWidget {
-    background-color: #1e1e1e;
-    color: #d4d4d4;
-    font-family: &quot;Segoe UI&quot;, sans-serif;
-    font-size: 13px;
+   <string notr="true">QComboBox {
+    min-width: 120px;   /* Width */
+    min-height: 30px;   /* Height */
+    font-size: 14px;    /* Optional: Adjust text */
 }
 
-QPushButton {
-    background-color: #2d2d30;
-    color: #ffffff;
-    border: 1px solid #3c3c3c;
-    border-radius: 6px;
-    padding: 6px 12px;
+/*Copyright (c) DevSec Studio. All rights reserved.
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/*-----QWidget-----*/
+QWidget
+{
+	background-color: #fff;
+	color: red;
+
 }
 
-QPushButton:hover {
-    background-color: #3c3c3c;
-    border: 1px solid #5a5a5a;
+
+/*-----QLabel-----*/
+QLabel
+{
+	background-color: transparent;
+	color: #454544;
+	font-weight: bold;
+	font-size: 13px;
+
 }
 
-QPushButton:pressed {
-    background-color: #2a2a2a;
-    border: 1px solid #0078d7;  /* Accent blue */
+
+/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: #5c55e9;
+	color: #fff;
+	font-size: 13px;
+	font-weight: bold;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 15px;
+	padding: 10px;
+
 }
 
-QLabel {
-    color: #d4d4d4;
+
+QPushButton::disabled
+{
+	background-color: #5c5c5c;
+
 }
 
-QComboBox {
-    background-color: #2d2d30;
-    color: #ffffff;
-    border: 1px solid #3c3c3c;
-    border-radius: 4px;
-    padding: 4px 8px;
+
+QPushButton::hover
+{
+	background-color: #5564f2;
+
 }
 
-QComboBox:hover {
-    border: 1px solid #5a5a5a;
+
+QPushButton::pressed
+{
+	background-color: #3d4ef2;
+
 }
 
-QGroupBox {
-    border: 1px solid #333;
-    border-radius: 6px;
-    margin-top: 20px;
+
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+	color: #5c55e9;
+	font-size: 10px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+
 }
 
-QGroupBox:title {
-    subcontrol-origin: margin;
-    subcontrol-position: top left;
-    padding: 0 5px;
-    color: #aaaaaa;
+
+/*-----QCheckBox-----*/
+QCheckBox::indicator
+{
+    background-color: #323232;
+    border: 1px solid darkgray;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;);
+	background-color: #5c55e9;
+    border: 1px solid #5c55e9;
+
+}
+
+
+QCheckBox::indicator:unchecked:hover
+{
+    border: 1px solid #5c55e9;
+
+}
+
+
+QCheckBox::disabled
+{
+	color: #656565;
+
+}
+
+
+QCheckBox::indicator:disabled
+{
+	background-color: #656565;
+	color: #656565;
+    border: 1px solid #656565;
+
+}
+
+
+/*-----QLineEdit-----*/
+QLineEdit
+{
+	background-color: #c2c7d5;
+	color: #2a547f;
+	border: none;
+	padding: 5px;
+
+}
+
+
+/*-----QListView-----*/
+QListView
+{
+	background-color: #5c55e9;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	show-decoration-selected: 0;
+	border-radius: 4px;
+	padding-left: -15px;
+	padding-right: -15px;
+	padding-top: 5px;
+
+} 
+
+
+QListView:disabled 
+{
+	background-color: #5c5c5c;
+
+}
+
+
+QListView::item
+{
+	background-color: #454e5e;
+	border: none;
+	padding: 10px;
+	border-radius: 0px;
+	padding-left : 10px;
+	height: 32px;
+
+}
+
+
+QListView::item:selected
+{
+	color: #000;
+	background-color: #fff;
+
+}
+
+
+QListView::item:!selected
+{
+	color:white;
+	background-color: transparent;
+	border: none;
+	padding-left : 10px;
+
+}
+
+
+QListView::item:!selected:hover
+{
+	color: #fff;
+	background-color: #5564f2;
+	border: none;
+	padding-left : 10px;
+
+}
+
+
+/*-----QTreeView-----*/
+QTreeView 
+{
+	background-color: #fff;
+	show-decoration-selected: 0;
+	color: #454544;
+
+}
+
+
+QTreeView:disabled
+{
+	background-color: #242526;
+	show-decoration-selected: 0;
+
+}
+
+
+QTreeView::item 
+{
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+
+}
+
+
+QTreeView::item:hover 
+{
+	background-color: #bcbdbb;
+	color: #000;
+
+}
+
+
+QTreeView::item:selected 
+{
+	background-color: #5c55e9;
+	color: #fff;
+
+}
+
+
+QTreeView::item:selected:active
+{
+	background-color: #5c55e9;
+	color: #fff;
+
+}
+
+
+QTreeView::item:selected:disabled
+{
+	background-color: #525251;
+	color: #656565;
+
+}
+
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings 
+{
+	image: url(://tree-closed.png);
+
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings  
+{
+	image: url(://tree-open.png);
+
+}
+
+
+/*-----QTableView &amp; QTableWidget-----*/
+QTableView
+{
+    background-color: #fff;
+	border: 1px solid gray;
+    color: #454544;
+    gridline-color: gray;
+    outline : 0;
+
+}
+
+
+QTableView::disabled
+{
+    background-color: #242526;
+    border: 1px solid #32414B;
+    color: #656565;
+    gridline-color: #656565;
+    outline : 0;
+
+}
+
+
+QTableView::item:hover 
+{
+    background-color: #bcbdbb;
+    color: #000;
+
+}
+
+
+QTableView::item:selected 
+{
+	background-color: #5c55e9;
+    color: #fff;
+
+}
+
+
+QTableView::item:selected:disabled
+{
+    background-color: #1a1b1c;
+    border: 2px solid #525251;
+    color: #656565;
+
+}
+
+
+QTableCornerButton::section
+{
+	background-color: #ced5e3;
+	border: none;
+    color: #fff;
+
+}
+
+
+QHeaderView::section
+{
+	color: #2a547f;
+	border: 0px;
+	background-color: #ced5e3;
+	padding: 5px;
+
+}
+
+
+QHeaderView::section:disabled
+{
+    background-color: #525251;
+    color: #656565;
+
+}
+
+
+QHeaderView::section:checked
+{
+    color: #fff;
+    background-color: #5c55e9;
+
+}
+
+
+QHeaderView::section:checked:disabled
+{
+    color: #656565;
+    background-color: #525251;
+
+}
+
+
+QHeaderView::section::vertical::first,
+QHeaderView::section::vertical::only-one
+{
+    border-top: 1px solid #353635;
+
+}
+
+
+QHeaderView::section::vertical
+{
+    border-top: 1px solid #353635;
+
+}
+
+
+QHeaderView::section::horizontal::first,
+QHeaderView::section::horizontal::only-one
+{
+    border-left: 1px solid #353635;
+
+}
+
+
+QHeaderView::section::horizontal
+{
+    border-left: 1px solid #353635;
+
+}
+
+
+/*-----QScrollBar-----*/
+QScrollBar:horizontal 
+{
     background-color: transparent;
+    height: 8px;
+    margin: 0px;
+    padding: 0px;
+
 }
 
-QLineEdit, QTextEdit {
-    background-color: #2d2d30;
-    border: 1px solid #444;
-    color: #ffffff;
-    border-radius: 4px;
-    padding: 4px;
+
+QScrollBar::handle:horizontal 
+{
+    border: none;
+	min-width: 100px;
+    background-color: #7e92b7;
+
 }
 
-QStatusBar {
-    background-color: #1e1e1e;
-    color: #888888;
+
+QScrollBar::add-line:horizontal, 
+QScrollBar::sub-line:horizontal,
+QScrollBar::add-page:horizontal, 
+QScrollBar::sub-page:horizontal 
+{
+    width: 0px;
+    background-color: #d8dce6;
+
+}
+
+
+QScrollBar:vertical 
+{
+    background-color: transparent;
+    width: 8px;
+    margin: 0;
+
+}
+
+
+QScrollBar::handle:vertical 
+{
+    border: none;
+	min-height: 100px;
+    background-color: #7e92b7;
+
+}
+
+
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical, 
+QScrollBar::sub-page:vertical 
+{
+    height: 0px;
+    background-color: #d8dce6;
+
 }
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">QMainWindow, QWidget {
-    background-color: #1e1e1e;
-    color: #d4d4d4;
-    font-family: &quot;Segoe UI&quot;, sans-serif;
-    font-size: 13px;
-}
-
-QPushButton {
-    background-color: #2d2d30;
-    color: #ffffff;
-    border: 1px solid #3c3c3c;
-    border-radius: 6px;
-    padding: 6px 12px;
-}
-
-QPushButton:hover {
-    background-color: #3c3c3c;
-    border: 1px solid #5a5a5a;
-}
-
-QPushButton:pressed {
-    background-color: #2a2a2a;
-    border: 1px solid #0078d7;  /* Accent blue */
-}
-
-QLabel {
-    color: #d4d4d4;
-}
-
-QComboBox {
-    background-color: #2d2d30;
-    color: #ffffff;
-    border: 1px solid #3c3c3c;
-    border-radius: 4px;
-    padding: 4px 8px;
-}
-
-QComboBox:hover {
-    border: 1px solid #5a5a5a;
-}
-
-QGroupBox {
-    border: 1px solid #333;
-    border-radius: 6px;
-    margin-top: 20px;
-}
-
-QGroupBox:title {
-    subcontrol-origin: margin;
-    subcontrol-position: top left;
-    padding: 0 5px;
-    color: #aaaaaa;
-    background-color: transparent;
-}
-
-QLineEdit, QTextEdit {
-    background-color: #2d2d30;
-    border: 1px solid #444;
-    color: #ffffff;
-    border-radius: 4px;
-    padding: 4px;
-}
-
-QStatusBar {
-    background-color: #1e1e1e;
-    color: #888888;
-}
-</string>
+    <string notr="true"/>
    </property>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>241</width>
-      <height>261</height>
+      <x>40</x>
+      <y>160</y>
+      <width>641</width>
+      <height>181</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Segoe UI,sans-serif</family>
-      <pointsize>-1</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="title">
      <string>Digital Inputs </string>
@@ -177,14 +512,15 @@ QStatusBar {
       <rect>
        <x>30</x>
        <y>30</y>
-       <width>71</width>
+       <width>111</width>
        <height>16</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -194,16 +530,17 @@ QStatusBar {
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>190</x>
        <y>30</y>
-       <width>81</width>
+       <width>91</width>
        <height>16</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -213,7 +550,7 @@ QStatusBar {
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>190</x>
        <y>90</y>
        <width>81</width>
        <height>16</height>
@@ -221,8 +558,9 @@ QStatusBar {
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -234,14 +572,15 @@ QStatusBar {
       <rect>
        <x>30</x>
        <y>90</y>
-       <width>81</width>
+       <width>121</width>
        <height>16</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -251,15 +590,14 @@ QStatusBar {
     <widget class="QComboBox" name="comboBox_14">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>190</x>
        <y>50</y>
-       <width>73</width>
-       <height>22</height>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -312,15 +650,14 @@ QStatusBar {
     <widget class="QComboBox" name="comboBox_13">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>190</x>
        <y>110</y>
-       <width>73</width>
-       <height>22</height>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -375,13 +712,12 @@ QStatusBar {
       <rect>
        <x>30</x>
        <y>50</y>
-       <width>73</width>
-       <height>22</height>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -436,13 +772,12 @@ QStatusBar {
       <rect>
        <x>30</x>
        <y>110</y>
-       <width>73</width>
-       <height>22</height>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -495,15 +830,14 @@ QStatusBar {
     <widget class="QComboBox" name="comboBox_22">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>160</y>
-       <width>73</width>
-       <height>22</height>
+       <x>340</x>
+       <y>50</y>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -556,16 +890,17 @@ QStatusBar {
     <widget class="QLabel" name="label_17">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>140</y>
-       <width>81</width>
+       <x>500</x>
+       <y>30</y>
+       <width>111</width>
        <height>16</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -575,16 +910,17 @@ QStatusBar {
     <widget class="QLabel" name="label_18">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>140</y>
-       <width>71</width>
+       <x>340</x>
+       <y>30</y>
+       <width>111</width>
        <height>16</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -594,16 +930,17 @@ QStatusBar {
     <widget class="QLabel" name="label_19">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>200</y>
-       <width>81</width>
+       <x>500</x>
+       <y>90</y>
+       <width>111</width>
        <height>16</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -613,15 +950,14 @@ QStatusBar {
     <widget class="QComboBox" name="comboBox_23">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>220</y>
-       <width>73</width>
-       <height>22</height>
+       <x>500</x>
+       <y>110</y>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -674,15 +1010,14 @@ QStatusBar {
     <widget class="QComboBox" name="comboBox_24">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>220</y>
-       <width>73</width>
-       <height>22</height>
+       <x>340</x>
+       <y>110</y>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -735,15 +1070,14 @@ QStatusBar {
     <widget class="QComboBox" name="comboBox_25">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>160</y>
-       <width>73</width>
-       <height>22</height>
+       <x>500</x>
+       <y>50</y>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -796,16 +1130,17 @@ QStatusBar {
     <widget class="QLabel" name="label_20">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>200</y>
-       <width>81</width>
+       <x>340</x>
+       <y>90</y>
+       <width>111</width>
        <height>16</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -816,16 +1151,15 @@ QStatusBar {
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>30</y>
-      <width>131</width>
-      <height>251</height>
+      <x>40</x>
+      <y>360</y>
+      <width>641</width>
+      <height>131</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Segoe UI,sans-serif</family>
-      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="title">
@@ -836,14 +1170,15 @@ QStatusBar {
       <rect>
        <x>30</x>
        <y>30</y>
-       <width>91</width>
+       <width>121</width>
        <height>16</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -853,16 +1188,17 @@ QStatusBar {
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>130</y>
-       <width>81</width>
+       <x>340</x>
+       <y>30</y>
+       <width>111</width>
        <height>16</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -872,16 +1208,17 @@ QStatusBar {
     <widget class="QLabel" name="label_15">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>190</y>
-       <width>81</width>
+       <x>490</x>
+       <y>30</y>
+       <width>121</width>
        <height>16</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -891,16 +1228,17 @@ QStatusBar {
     <widget class="QLabel" name="label_16">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>80</y>
-       <width>91</width>
+       <x>190</x>
+       <y>30</y>
+       <width>121</width>
        <height>16</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -910,15 +1248,14 @@ QStatusBar {
     <widget class="QComboBox" name="comboBox_18">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>150</y>
-       <width>73</width>
-       <height>22</height>
+       <x>340</x>
+       <y>50</y>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -971,15 +1308,14 @@ QStatusBar {
     <widget class="QComboBox" name="comboBox_19">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>210</y>
-       <width>73</width>
-       <height>22</height>
+       <x>490</x>
+       <y>50</y>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -1034,13 +1370,12 @@ QStatusBar {
       <rect>
        <x>30</x>
        <y>50</y>
-       <width>73</width>
-       <height>22</height>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -1093,15 +1428,14 @@ QStatusBar {
     <widget class="QComboBox" name="comboBox_21">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>100</y>
-       <width>73</width>
-       <height>22</height>
+       <x>190</x>
+       <y>50</y>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -1155,16 +1489,15 @@ QStatusBar {
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>130</y>
-      <width>131</width>
+      <x>40</x>
+      <y>510</y>
+      <width>641</width>
       <height>151</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Segoe UI,sans-serif</family>
-      <pointsize>-1</pointsize>
      </font>
     </property>
     <property name="title">
@@ -1181,8 +1514,9 @@ QStatusBar {
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -1192,16 +1526,17 @@ QStatusBar {
     <widget class="QLabel" name="label_22">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>80</y>
+       <x>190</x>
+       <y>30</y>
        <width>91</width>
        <height>16</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -1213,13 +1548,12 @@ QStatusBar {
       <rect>
        <x>30</x>
        <y>50</y>
-       <width>73</width>
-       <height>22</height>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -1242,15 +1576,14 @@ QStatusBar {
     <widget class="QComboBox" name="comboBox_29">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>100</y>
-       <width>73</width>
-       <height>22</height>
+       <x>190</x>
+       <y>50</y>
+       <width>122</width>
+       <height>32</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI,sans-serif</family>
        <pointsize>-1</pointsize>
       </font>
      </property>
@@ -1271,52 +1604,20 @@ QStatusBar {
      </item>
     </widget>
    </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>50</y>
-      <width>101</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI,sans-serif</family>
-      <pointsize>-1</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QWidget {
-    background-image: url(:/images/bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../Users/nikhi/Downloads/Untitled.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>300</y>
+      <x>280</x>
+      <y>720</y>
       <width>141</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI,sans-serif</family>
       <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -1333,14 +1634,42 @@ QStatusBar {
      </size>
     </property>
    </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>60</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    min-width: 100px;    /* Optional: Width */
+    min-height: 30px;    /* Optional: Height */
+    font-size: 34px;     /* Adjust font size */
+    font-weight: bold;   /* Optional: make text bold */
+}</string>
+    </property>
+    <property name="text">
+     <string>Test App </string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>567</width>
-     <height>23</height>
+     <width>720</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menufile">
