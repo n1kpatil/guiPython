@@ -1,5 +1,5 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtWidgets import QApplication, QMainWindow
 from test import Ui_MainWindow  # Keep using your existing test.py
 
 class MainWindow(QMainWindow):
