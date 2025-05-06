@@ -1,7 +1,7 @@
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow
 from test import Ui_MainWindow  # Keep using your existing test.py
-from yourfile_ui import Ui_MainWindow as Ui_SecondWindow  # Replace with your actual UI file
+from  plot import Ui_MainWindow as Ui_SecondWindow  # Replace with your actual UI file
 
 
 class SecondWindow(QMainWindow):
@@ -12,7 +12,7 @@ class SecondWindow(QMainWindow):
 
         # selections is a list of strings (or whatever you passed)
         # e.g. display them in a label or start processing
-        self.ui.label.setText(" | ".join(selections[0]))
+      #  self.ui.label.setText(" | ".join(selections[0]))
         # Or if you want them individually:
         # first, second, third = selections
         # self.process_all(first, second, third)

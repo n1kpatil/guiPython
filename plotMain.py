@@ -1,7 +1,7 @@
 import sys
 import numpy as np
-from PySide6.QtWidgets import QApplication, QMainWindow
-from PySide6.QtCore    import QTimer
+from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtCore    import QTimer
 import pyqtgraph as pg
 
 from plot import Ui_MainWindow    # generated via: `pyside6-uic your.ui -o test.py`
