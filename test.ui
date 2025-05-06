@@ -31,17 +31,12 @@ QComboBox::drop-down {
     subcontrol-origin: padding;
     subcontrol-position: top right;
     width: 25px;
-    background-color: #5c55e9;
+    background-color: #f0742f;
     border-left: 1px solid #888;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-/* Drop-down arrow icon */
-QComboBox::down-arrow {
-    image: none; /* Optional: remove built-in arrow if you want to add your own */
-    border: none;
-}
 
 /* Drop-down list (popup) */
 QComboBox QAbstractItemView {
@@ -50,6 +45,222 @@ QComboBox QAbstractItemView {
     selection-background-color: #3d4ef2;
     selection-color: white;
     border: none;
+}
+
+
+QComboBox {
+    background-color: #292f45;
+    color: #ffffff;
+    border: 1px solid #f0742f;
+    padding-right: 20px;      /* make room for the arrow */
+}
+
+/* drop-down “button” area */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left: 1px solid #f0742f;
+}
+
+/* hide any default icon */
+QComboBox::down-arrow {
+    image: none;
+    /* zero-size box so borders form the triangle */
+    width: 0;
+    height: 0;
+    /* left and right edges transparent */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    /* top edge colored → points down */
+    border-top: 7px solid white;
+}
+
+/* when pressed, you can nudge it if you like */
+QComboBox::down-arrow:on {
+    border-top-color: lightgray;  /* optional press effect */
+    margin-top: 2px;
+}
+QComboBox::down-arrow {
+    image: none;
+    background: transparent;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right:5px solid transparent;
+    border-top: 5px solid white;    /* ← this is your white arrow */
+}
+/*Copyright (c) DevSec Studio. All rights reserved.
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/*-----QWidget-----*/
+QWidget
+{
+	background-color: #292f45;
+	color: #b9b9bb;
+	border-color: #000000;
+
+}
+
+
+/*-----QLabel-----*/
+QLabel
+{
+	background-color: #292f45;
+	color: #b9b9bb;
+	border-color: #000000;
+
+}
+
+
+/*-----QPushButton-----*/
+QPushButton
+{
+	background-color: #f0742f;
+	color: #fff;
+	font-weight: bold;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 17px;
+	border-color: #f0742f;
+	padding: 10px;
+
+}
+
+
+QPushButton::hover
+{
+	background-color: #fc7c11;
+	color: #fff;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: #ff6b35;
+	color: #fff;
+
+}
+
+
+/*-----QToolButton-----*/
+QToolButton
+{
+	background-color: #292f45;
+	color: #000000;
+	border-style: solid;
+	border-color: #000000;
+
+}
+
+
+QToolButton::hover
+{
+	background-color: #fc7c11;
+	color: #000000;
+	padding: 2px;
+	border-radius: 15px;
+	border-color: #fc7c11;
+
+}
+
+
+QToolButton::pressed
+{
+	background-color: #fc7c11;
+	color: #000000;
+	border-style: solid;
+	border-width: 2px;
+
+}
+
+
+/*-----QLineEdit-----*/
+QLineEdit{
+	background-color: #292f45;
+	color: #b9b9bb;
+	font-weight: bold;
+	border-style: solid;
+	border-width: 2px;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-color: #b9b9bb;
+	padding: 10px;
+
+}
+
+
+/*-----QCheckBox-----*/
+QCheckBox
+{
+	background-color: transparent;
+	color: #b9b9bb;
+	font-weight: bold;
+
+}
+
+
+QCheckBox::indicator
+{
+    color: #b1b1b1;
+    background-color: #00111d;
+    border: 1px solid #f0742f;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+QCheckBox::indicator:checked
+{
+    image:url(&quot;./ressources/check.png&quot;); /*To replace*/
+	background-color: #1f2b2b;
+    border: 1px solid #f0742f;
+
+}
+
+
+QCheckBox::indicator:unchecked:hover
+{
+    border: 1px solid #f0742f;
+
+}
+
+
+QCheckBox::disabled
+{
+	color: #656565;
+
+}
+
+
+QCheckBox::indicator:disabled
+{
+	background-color: #656565;
+	color: #656565;
+    border: 1px solid #656565;
+
 }
 </string>
   </property>
@@ -60,10 +271,10 @@ QComboBox QAbstractItemView {
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>160</y>
-      <width>641</width>
-      <height>181</height>
+      <x>20</x>
+      <y>130</y>
+      <width>681</width>
+      <height>321</height>
      </rect>
     </property>
     <property name="font">
@@ -80,8 +291,8 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>30</y>
+       <x>70</x>
+       <y>40</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -99,8 +310,8 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>30</y>
+       <x>270</x>
+       <y>40</y>
        <width>91</width>
        <height>16</height>
       </rect>
@@ -118,9 +329,9 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>90</y>
-       <width>81</width>
+       <x>270</x>
+       <y>140</y>
+       <width>101</width>
        <height>16</height>
       </rect>
      </property>
@@ -137,8 +348,8 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>90</y>
+       <x>70</x>
+       <y>140</y>
        <width>121</width>
        <height>16</height>
       </rect>
@@ -156,10 +367,10 @@ QComboBox QAbstractItemView {
     <widget class="QComboBox" name="comboBox_14">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>50</y>
-       <width>130</width>
-       <height>40</height>
+       <x>260</x>
+       <y>60</y>
+       <width>147</width>
+       <height>42</height>
       </rect>
      </property>
      <property name="font">
@@ -218,10 +429,10 @@ QComboBox QAbstractItemView {
     <widget class="QComboBox" name="comboBox_13">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>110</y>
-       <width>130</width>
-       <height>40</height>
+       <x>260</x>
+       <y>160</y>
+       <width>147</width>
+       <height>42</height>
       </rect>
      </property>
      <property name="font">
@@ -280,10 +491,10 @@ QComboBox QAbstractItemView {
     <widget class="QComboBox" name="comboBox_12">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>50</y>
-       <width>130</width>
-       <height>40</height>
+       <x>60</x>
+       <y>60</y>
+       <width>147</width>
+       <height>42</height>
       </rect>
      </property>
      <property name="font">
@@ -342,10 +553,10 @@ QComboBox QAbstractItemView {
     <widget class="QComboBox" name="comboBox_7">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>110</y>
-       <width>130</width>
-       <height>40</height>
+       <x>60</x>
+       <y>160</y>
+       <width>147</width>
+       <height>42</height>
       </rect>
      </property>
      <property name="font">
@@ -404,10 +615,10 @@ QComboBox QAbstractItemView {
     <widget class="QComboBox" name="comboBox_22">
      <property name="geometry">
       <rect>
-       <x>340</x>
-       <y>50</y>
-       <width>130</width>
-       <height>40</height>
+       <x>470</x>
+       <y>60</y>
+       <width>147</width>
+       <height>42</height>
       </rect>
      </property>
      <property name="font">
@@ -466,8 +677,8 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label_17">
      <property name="geometry">
       <rect>
-       <x>500</x>
-       <y>30</y>
+       <x>270</x>
+       <y>230</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -485,8 +696,8 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label_18">
      <property name="geometry">
       <rect>
-       <x>340</x>
-       <y>30</y>
+       <x>480</x>
+       <y>40</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -504,8 +715,8 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label_19">
      <property name="geometry">
       <rect>
-       <x>500</x>
-       <y>90</y>
+       <x>70</x>
+       <y>230</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -523,10 +734,10 @@ QComboBox QAbstractItemView {
     <widget class="QComboBox" name="comboBox_23">
      <property name="geometry">
       <rect>
-       <x>500</x>
-       <y>110</y>
-       <width>130</width>
-       <height>40</height>
+       <x>60</x>
+       <y>250</y>
+       <width>147</width>
+       <height>42</height>
       </rect>
      </property>
      <property name="font">
@@ -585,10 +796,10 @@ QComboBox QAbstractItemView {
     <widget class="QComboBox" name="comboBox_24">
      <property name="geometry">
       <rect>
-       <x>340</x>
-       <y>110</y>
-       <width>130</width>
-       <height>40</height>
+       <x>470</x>
+       <y>160</y>
+       <width>147</width>
+       <height>42</height>
       </rect>
      </property>
      <property name="font">
@@ -647,10 +858,10 @@ QComboBox QAbstractItemView {
     <widget class="QComboBox" name="comboBox_25">
      <property name="geometry">
       <rect>
-       <x>500</x>
-       <y>50</y>
-       <width>130</width>
-       <height>40</height>
+       <x>260</x>
+       <y>250</y>
+       <width>147</width>
+       <height>42</height>
       </rect>
      </property>
      <property name="font">
@@ -709,8 +920,8 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label_20">
      <property name="geometry">
       <rect>
-       <x>340</x>
-       <y>90</y>
+       <x>480</x>
+       <y>140</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -729,10 +940,10 @@ QComboBox QAbstractItemView {
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>360</y>
-      <width>641</width>
-      <height>131</height>
+      <x>20</x>
+      <y>500</y>
+      <width>681</width>
+      <height>221</height>
      </rect>
     </property>
     <property name="font">
@@ -746,8 +957,8 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>30</y>
+       <x>80</x>
+       <y>40</y>
        <width>121</width>
        <height>16</height>
       </rect>
@@ -765,8 +976,8 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>340</x>
-       <y>30</y>
+       <x>500</x>
+       <y>40</y>
        <width>111</width>
        <height>16</height>
       </rect>
@@ -784,8 +995,8 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label_15">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>30</y>
+       <x>80</x>
+       <y>130</y>
        <width>121</width>
        <height>16</height>
       </rect>
@@ -803,8 +1014,8 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label_16">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>30</y>
+       <x>280</x>
+       <y>40</y>
        <width>121</width>
        <height>16</height>
       </rect>
@@ -819,137 +1030,13 @@ QComboBox QAbstractItemView {
       <string>Analog Input 3</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox_18">
-     <property name="geometry">
-      <rect>
-       <x>340</x>
-       <y>50</y>
-       <width>130</width>
-       <height>40</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>-1</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <item>
-      <property name="text">
-       <string>LB</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>HB</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>DRL/POL</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>TI</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Animation</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Stop</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Tail</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Side Marker</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Seq TI</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="comboBox_19">
-     <property name="geometry">
-      <rect>
-       <x>490</x>
-       <y>50</y>
-       <width>130</width>
-       <height>40</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>-1</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <item>
-      <property name="text">
-       <string>LB</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>HB</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>DRL/POL</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>TI</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Animation</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Stop</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Tail</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Side Marker</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Seq TI</string>
-      </property>
-     </item>
-    </widget>
     <widget class="QComboBox" name="comboBox_20">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>50</y>
-       <width>130</width>
-       <height>40</height>
+       <x>60</x>
+       <y>60</y>
+       <width>147</width>
+       <height>42</height>
       </rect>
      </property>
      <property name="font">
@@ -961,57 +1048,60 @@ QComboBox QAbstractItemView {
      </property>
      <item>
       <property name="text">
-       <string>LB</string>
+       <string>BIN</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>HB</string>
+       <string>NTC</string>
       </property>
      </item>
-     <item>
-      <property name="text">
-       <string>DRL/POL</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>TI</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Animation</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Stop</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Tail</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Side Marker</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Seq TI</string>
-      </property>
-     </item>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>130</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Analog Input 4</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>130</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Analog Input 4</string>
+     </property>
     </widget>
     <widget class="QComboBox" name="comboBox_21">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>50</y>
-       <width>130</width>
-       <height>40</height>
+       <x>260</x>
+       <y>60</y>
+       <width>147</width>
+       <height>42</height>
       </rect>
      </property>
      <property name="font">
@@ -1023,47 +1113,120 @@ QComboBox QAbstractItemView {
      </property>
      <item>
       <property name="text">
-       <string>LB</string>
+       <string>BIN</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>HB</string>
+       <string>NTC</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_26">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>60</y>
+       <width>147</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>BIN</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>DRL/POL</string>
+       <string>NTC</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_27">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>150</y>
+       <width>147</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>BIN</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>TI</string>
+       <string>NTC</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_30">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>150</y>
+       <width>147</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>BIN</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Animation</string>
+       <string>NTC</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_31">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>150</y>
+       <width>147</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>BIN</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Stop</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Tail</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Side Marker</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Seq TI</string>
+       <string>NTC</string>
       </property>
      </item>
     </widget>
@@ -1071,9 +1234,9 @@ QComboBox QAbstractItemView {
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>510</y>
-      <width>641</width>
+      <x>20</x>
+      <y>770</y>
+      <width>681</width>
       <height>151</height>
      </rect>
     </property>
@@ -1088,8 +1251,8 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label_11">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>30</y>
+       <x>140</x>
+       <y>40</y>
        <width>91</width>
        <height>16</height>
       </rect>
@@ -1107,8 +1270,8 @@ QComboBox QAbstractItemView {
     <widget class="QLabel" name="label_22">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>30</y>
+       <x>340</x>
+       <y>40</y>
        <width>91</width>
        <height>16</height>
       </rect>
@@ -1126,10 +1289,10 @@ QComboBox QAbstractItemView {
     <widget class="QComboBox" name="comboBox_28">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>50</y>
-       <width>130</width>
-       <height>40</height>
+       <x>140</x>
+       <y>60</y>
+       <width>147</width>
+       <height>42</height>
       </rect>
      </property>
      <property name="font">
@@ -1158,10 +1321,10 @@ QComboBox QAbstractItemView {
     <widget class="QComboBox" name="comboBox_29">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>50</y>
-       <width>130</width>
-       <height>40</height>
+       <x>340</x>
+       <y>60</y>
+       <width>147</width>
+       <height>42</height>
       </rect>
      </property>
      <property name="font">
@@ -1192,7 +1355,7 @@ QComboBox QAbstractItemView {
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>720</y>
+      <y>1000</y>
       <width>141</width>
       <height>61</height>
      </rect>
@@ -1220,8 +1383,8 @@ QComboBox QAbstractItemView {
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>60</y>
+      <x>290</x>
+      <y>50</y>
       <width>161</width>
       <height>61</height>
      </rect>
