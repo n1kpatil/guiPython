@@ -291,28 +291,9 @@ QCheckBox::indicator:disabled
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>480</x>
        <y>40</y>
        <width>111</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Logic Input 1 </string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>40</y>
-       <width>91</width>
        <height>16</height>
       </rect>
      </property>
@@ -329,8 +310,8 @@ QCheckBox::indicator:disabled
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>140</y>
+       <x>280</x>
+       <y>40</y>
        <width>101</width>
        <height>16</height>
       </rect>
@@ -342,7 +323,7 @@ QCheckBox::indicator:disabled
       </font>
      </property>
      <property name="text">
-      <string>Logic Input 6</string>
+      <string>Logic Input 1</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_8">
@@ -361,76 +342,14 @@ QCheckBox::indicator:disabled
       </font>
      </property>
      <property name="text">
-      <string>Logic Input 5</string>
+      <string>Logic Input 3</string>
      </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox_14">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>60</y>
-       <width>147</width>
-       <height>42</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>-1</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <item>
-      <property name="text">
-       <string>LB</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>HB</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>DRL/POL</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>TI</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Animation</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Stop</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Tail</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Side Marker</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Seq TI</string>
-      </property>
-     </item>
     </widget>
     <widget class="QComboBox" name="comboBox_13">
      <property name="geometry">
       <rect>
-       <x>260</x>
-       <y>160</y>
+       <x>270</x>
+       <y>60</y>
        <width>147</width>
        <height>42</height>
       </rect>
@@ -491,7 +410,7 @@ QCheckBox::indicator:disabled
     <widget class="QComboBox" name="comboBox_12">
      <property name="geometry">
       <rect>
-       <x>60</x>
+       <x>470</x>
        <y>60</y>
        <width>147</width>
        <height>42</height>
@@ -612,11 +531,49 @@ QCheckBox::indicator:disabled
       </property>
      </item>
     </widget>
-    <widget class="QComboBox" name="comboBox_22">
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>230</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Logic Input 7</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
      <property name="geometry">
       <rect>
        <x>470</x>
-       <y>60</y>
+       <y>140</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Logic Input 5</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_23">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>160</y>
        <width>147</width>
        <height>42</height>
       </rect>
@@ -674,64 +631,7 @@ QCheckBox::indicator:disabled
       </property>
      </item>
     </widget>
-    <widget class="QLabel" name="label_17">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>230</y>
-       <width>111</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Logic Input 4</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_18">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>40</y>
-       <width>111</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Logic Input 3</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_19">
-     <property name="geometry">
-      <rect>
-       <x>70</x>
-       <y>230</y>
-       <width>111</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Logic Input 8</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox_23">
+    <widget class="QComboBox" name="comboBox_24">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -793,72 +693,10 @@ QCheckBox::indicator:disabled
       </property>
      </item>
     </widget>
-    <widget class="QComboBox" name="comboBox_24">
-     <property name="geometry">
-      <rect>
-       <x>470</x>
-       <y>160</y>
-       <width>147</width>
-       <height>42</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>-1</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <item>
-      <property name="text">
-       <string>LB</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>HB</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>DRL/POL</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>TI</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Animation</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Stop</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Tail</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Side Marker</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Seq TI</string>
-      </property>
-     </item>
-    </widget>
     <widget class="QComboBox" name="comboBox_25">
      <property name="geometry">
       <rect>
-       <x>260</x>
+       <x>270</x>
        <y>250</y>
        <width>147</width>
        <height>42</height>
@@ -920,7 +758,169 @@ QCheckBox::indicator:disabled
     <widget class="QLabel" name="label_20">
      <property name="geometry">
       <rect>
-       <x>480</x>
+       <x>70</x>
+       <y>230</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Logic Input 6</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_14">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>60</y>
+       <width>147</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Logic Input 0</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_22">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>160</y>
+       <width>147</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <item>
+      <property name="text">
+       <string>LB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DRL/POL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Animation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tail</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Side Marker</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Seq TI</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
        <y>140</y>
        <width>111</width>
        <height>16</height>
@@ -933,7 +933,7 @@ QCheckBox::indicator:disabled
       </font>
      </property>
      <property name="text">
-      <string>Logic Input 7</string>
+      <string>Logic Input 4</string>
      </property>
     </widget>
    </widget>
@@ -1382,8 +1382,8 @@ QCheckBox::indicator:disabled
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>10</y>
+      <x>280</x>
+      <y>870</y>
       <width>141</width>
       <height>61</height>
      </rect>
@@ -1418,14 +1418,6 @@ QCheckBox::indicator:disabled
      <height>26</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menufile">
-    <property name="title">
-     <string>file</string>
-    </property>
-    <addaction name="actionsave"/>
-    <addaction name="actionload"/>
-   </widget>
-   <addaction name="menufile"/>
   </widget>
   <action name="actionsave">
    <property name="text">

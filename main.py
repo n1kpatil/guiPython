@@ -1,25 +1,57 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from test import Ui_MainWindow  # Keep using your existing test.py
-from  plot import Ui_MainWindow as Ui_SecondWindow  # Replace with your actual UI file
+import numpy as np
 
+
+from PyQt5.QtWidgets    import QApplication, QMainWindow
+from test               import Ui_MainWindow  # Keep using your existing test.py
+from plot               import Ui_MainWindow as Ui_SecondWindow  # Replace with your actual UI file
+from spi_backend        import SPIBus
+from PyQt5.QtCore       import QTimer
+import pyqtgraph as pg
 
 class SecondWindow(QMainWindow):
     def __init__(self, selections):
         super().__init__()
         self.ui = Ui_SecondWindow()
         self.ui.setupUi(self)
+        self.logicinputLabeling(selections)
+        # set up the plot
+        self.plot = pg.PlotWidget()
+        self.ui.plotContainer.layout().addWidget(self.plot)
+        self.curve = self.plot.plot()
 
-        # selections is a list of strings (or whatever you passed)
-        # e.g. display them in a label or start processing
-      #  self.ui.label.setText(" | ".join(selections[0]))
-        # Or if you want them individually:
-        # first, second, third = selections
-        # self.process_all(first, second, third)
+          # initialize SPI (real on Linux, simulated on other OS)
+        self.spi = SPIBus(bus=0, device=0)
 
-    # def process_all(self, a, b, c):
-    #     # your logic here
-    #     pass
+        # rolling buffer for 100 samples
+        self.data = np.zeros(100)
+
+        # timer to drive live updates
+        self.timer = QTimer(self, interval=50)   # 50 ms → 20 Hz
+        self.timer.timeout.connect(self.update)
+        self.timer.start()
+
+    def logicinputLabeling(self, selections):   
+        self.ui.pushButton.setText(selections[0])
+        self.ui.pushButton_2.setText(selections[1])
+        self.ui.pushButton_3.setText(selections[2])
+        self.ui.pushButton_4.setText(selections[3])
+        self.ui.pushButton_5.setText(selections[4])
+        self.ui.pushButton_6.setText(selections[5])
+        self.ui.pushButton_7.setText(selections[6])
+        self.ui.pushButton_8.setText(selections[7])
+        
+    # set up the plot
+    def update(self):
+        # shift old samples left
+        self.data[:-1] = self.data[1:]
+        # read a new sample from SPIBus
+        raw = self.spi.read16()
+        # normalize a 12-bit value to 0.0–1.0
+        self.data[-1] = raw / 4095.0
+        # refresh the curve
+        self.curve.setData(self.data)
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -37,6 +69,19 @@ class MainWindow(QMainWindow):
             self.ui.comboBox_14.currentText(),
             self.ui.comboBox_13.currentText(),
             self.ui.comboBox_12.currentText(),
+            self.ui.comboBox_7.currentText(),
+            self.ui.comboBox_22.currentText(),
+            self.ui.comboBox_23.currentText(),
+            self.ui.comboBox_24.currentText(),
+            self.ui.comboBox_25.currentText(),
+            self.ui.comboBox_20.currentText(),
+            self.ui.comboBox_21.currentText(),
+            self.ui.comboBox_26.currentText(),
+            self.ui.comboBox_27.currentText(),
+            self.ui.comboBox_30.currentText(),            
+            self.ui.comboBox_31.currentText(),            
+            self.ui.comboBox_28.currentText(),            
+            self.ui.comboBox_29.currentText(),
             # add more as needed…
         ]
 
